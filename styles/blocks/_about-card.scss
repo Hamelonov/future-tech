@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.about-card {
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+    row-gap: fluid(20, 10);
+
+	&__title {
+		@include fluid-text(22, 16);
+
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-family: var(--font-family-base);
+	}
+}

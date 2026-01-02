@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.field {
+	display: grid;
+	row-gap: rem(16);
+
+	@include laptop {
+		row-gap: rem(12);
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: rem(16);
+
+		@include laptop {
+			column-gap: rem(12);
+		}
+	}
+
+	&__label {
+		color: var(--color-light);
+	}
+
+	&__control {
+		padding: rem(20);
+		color: var(--color-light);
+		background-color: var(--color-dark-10);
+		border: var(--border);
+		border-radius: rem(8);
+
+		@include laptop {
+			padding: rem(16);
+			border-radius: rem(6);
+		}
+
+		@include hover {
+			box-shadow: var(--box-shadow);
+		}
+
+		&::placeholder {
+			color: var(--color-dark-40);
+		}
+
+		&:user-invalid {
+			border-color: var(--color-red);
+		}
+	}
+
+	textarea.field__control {
+		resize: vertical;
+		min-height: rem(163);
+
+		@include mobile-s {
+			min-height: rem(127);
+		}
+	}
+}

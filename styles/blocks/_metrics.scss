@@ -1,0 +1,94 @@
+@use '../helpers' as *;
+
+.metrics {
+	--columns: 3;
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(var(--columns), 1fr);
+		align-items: start;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column-reverse;
+		row-gap: rem(10);
+		padding: rem(50);
+
+		@include laptop {
+			row-gap: rem(2);
+			padding: rem(30) rem(40);
+		}
+
+		@include tablet {
+			row-gap: 0;
+			padding: rem(20);
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:not(:last-child) {
+			border-right: var(--border);
+		}
+	}
+
+	&__value {
+		font-weight: 600;
+		font-family: var(--font-family-base);
+	}
+
+	&__sign {
+		color: var(--color-accent);
+	}
+
+	&--4-cols {
+		--columns: 4;
+
+		text-align: center;
+
+		.metrics__list {
+			align-items: normal;
+		}
+
+		@include tablet-above {
+			.metrics__item:nth-child(4n) {
+				padding-right: 0;
+			}
+		}
+
+		.metrics__item {
+			padding: rem(80);
+
+			@include laptop {
+				padding: rem(50);
+			}
+		}
+
+		@include tablet {
+			--columns: 2;
+
+			.metrics__item {
+				padding: rem(20);
+
+				&:nth-child(odd) {
+					padding-left: var(--container-padding-x);
+					border-bottom: var(--border);
+				}
+
+				&:nth-child(even) {
+					padding-right: var(--container-padding-x);
+					border-bottom: var(--border);
+					border-right: none;
+				}
+			}
+		}
+	}
+}
+
+section[aria-labelledby='podcasts-title'] {
+	.tile {
+		padding: fluid(30, 24);
+	}
+}

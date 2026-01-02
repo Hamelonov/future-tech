@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.tile {
+	padding: fluid(30, 20);
+	background-color: var(--color-dark-10);
+	border: var(--border);
+	border-radius: rem(12);
+
+	@include laptop {
+		border-radius: rem(10);
+	}
+}
+
+section[aria-labelledby='features-title'] {
+	.tile {
+		padding: fluid(40, 24);
+	}
+}

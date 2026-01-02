@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.report-card {
+	display: grid;
+	row-gap: fluid(30, 20);
+
+	&__image {
+		width: 100%;
+		height: fluid(290, 223);
+		object-fit: cover;
+		border-radius: rem(12);
+	}
+
+	&__body {
+		display: grid;
+		row-gap: rem(14);
+
+		@include laptop {
+			row-gap: rem(10);
+		}
+	}
+
+	&__actions {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: rem(20);
+
+		@include laptop {
+			column-gap: rem(10);
+		}
+	}
+}
