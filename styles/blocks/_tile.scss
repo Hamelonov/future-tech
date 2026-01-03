@@ -16,3 +16,9 @@ section[aria-labelledby='features-title'] {
 		padding: fluid(40, 24);
 	}
 }
+
+section[aria-labelledby='podcasts-title'] {
+	.tile {
+		padding: fluid(30, 24);
+	}
+}

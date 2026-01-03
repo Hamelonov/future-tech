@@ -955,16 +955,10 @@ button[aria-label]::before {
   --columns: 4;
   text-align: center;
 }
-.metrics--4-cols .metrics__list {
-  align-items: normal;
-}
-@media (width > 63.99875rem) {
-  .metrics--4-cols .metrics__item:nth-child(4n) {
-    padding-right: 0;
-  }
-}
 .metrics--4-cols .metrics__item {
+  justify-content: start;
   padding: 5rem;
+  height: 100%;
 }
 @media (width <= 90.06125rem) {
   .metrics--4-cols .metrics__item {
@@ -987,10 +981,6 @@ button[aria-label]::before {
     border-bottom: var(--border);
     border-right: none;
   }
-}
-
-section[aria-labelledby=podcasts-title] .tile {
-  padding: clamp(1.5rem, 1.3791322314rem + 0.4958677686vw, 1.875rem);
 }
 
 .team {
@@ -1293,6 +1283,10 @@ section[aria-labelledby=podcasts-title] .tile {
 
 section[aria-labelledby=features-title] .tile {
   padding: clamp(1.5rem, 1.1776859504rem + 1.3223140496vw, 2.5rem);
+}
+
+section[aria-labelledby=podcasts-title] .tile {
+  padding: clamp(1.5rem, 1.3791322314rem + 0.4958677686vw, 1.875rem);
 }
 
 @media (width > 63.99875rem) {

@@ -48,18 +48,10 @@
 
 		text-align: center;
 
-		.metrics__list {
-			align-items: normal;
-		}
-
-		@include tablet-above {
-			.metrics__item:nth-child(4n) {
-				padding-right: 0;
-			}
-		}
-
 		.metrics__item {
+			justify-content: start;
 			padding: rem(80);
+			height: 100%;
 
 			@include laptop {
 				padding: rem(50);
@@ -84,11 +76,5 @@
 				}
 			}
 		}
-	}
-}
-
-section[aria-labelledby='podcasts-title'] {
-	.tile {
-		padding: fluid(30, 24);
 	}
 }
