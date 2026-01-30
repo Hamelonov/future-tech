@@ -2538,6 +2538,9 @@ section[aria-labelledby=podcasts-title] .tile {
   color: inherit;
   transition-duration: var(--transition-duration);
 }
+.accordion__title:hover {
+  cursor: pointer;
+}
 .accordion__title::before, .accordion__title::after {
   position: absolute;
   top: 50%;

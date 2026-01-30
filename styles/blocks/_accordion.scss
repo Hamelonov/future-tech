@@ -39,6 +39,10 @@
 		color: inherit;
         transition-duration: var(--transition-duration);
 
+		&:hover {
+			cursor: pointer;
+		}
+
 		&::before,
 		&::after {
 			@include abs-y;
